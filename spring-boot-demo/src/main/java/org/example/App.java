@@ -2,6 +2,7 @@ package org.example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
@@ -9,7 +10,9 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
  * Hello world!
  *
  */
-@SpringBootApplication
+@SpringBootApplication(exclude = {
+        DataSourceAutoConfiguration.class
+})
 public class App extends SpringBootServletInitializer {
 
     //可以打成war包并扔到Tomcat里运行
