@@ -21,7 +21,8 @@ public class SpringTest {
 
     @Test
     public void test2(){
-
+        String a="aaa";
+        System.out.println(a);
     }
 
 }
